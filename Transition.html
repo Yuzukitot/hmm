@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation jquery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+     <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #toggle, #toggle1, #toggle2, #toggle3, #toggle4 {
+            width: 150px;
+            height: 150px;
+            background-color: gray;
+            margin: 20px auto;
+            display: none; /* Initially hidden */
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+
+    </style>
+</head>
+
+<body>
+    <button id="button">Click Me!</button>
+    <div id="toggle"></div>
+    <div id="toggle1"></div>
+    <div id="toggle2"></div>
+    <div id="toggle3"></div>
+    <div id="toggle4"></div>
+
+    <script>
+        $(document).ready(function () {
+            $('#button').click(function () {
+                $("#toggle").toggle("drop");
+
+                $("#toggle1").toggle("puff");
+                
+                  $( "#toggle2" ).toggle( "slide" );
+                   
+                   $( "#toggle3" ).toggle( "highlight" );
+                      
+                   $( "#toggle4" ).toggle( "shake" );
+            });
+        });
+    </script>
+</body>
+
+</html>
